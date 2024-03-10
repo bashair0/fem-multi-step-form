@@ -13,27 +13,107 @@
     <link rel="stylesheet" href="style.css" />
 
     <title>Frontend Mentor | Multi-step form</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
   <body>
-    <p>Select your plan</p>
     <!-- Sidebar start -->
+    <form action="#" method="post" class="form | flex">
+      <!-- PROGRESS BAR -->
+      <div class="progress-bar">
+        <div class="progress-step">
+          <div class="progress-step__num progress-step-active"></div>
+          <div class="progress-step__title">
+            <h3 class="">step 1</h3>
+            <p class="">Your info</p>
+          </div>
+        </div>
+        <div class="progress-step">
+          <div class="progress-step__num"></div>
+          <div class="progress-step__title">
+            <h3 class="">step 2</h3>
+            <p class="">Select Plan</p>
+          </div>
+        </div>
+        <div class="progress-step">
+          <div class="progress-step__num"></div>
+          <div class="progress-step__title">
+            <h3 class="">step 3</h3>
+            <p class="">Add-ons</p>
+          </div>
+        </div>
+        <div class="progress-step">
+          <div class="progress-step__num"></div>
+          <div class="progress-step__title">
+            <h3 class="">step 4</h3>
+            <p class="">Summary</p>
+          </div>
+        </div>
+      </div>
+      <!-- Sidebar end -->
 
-    <!-- Sidebar end -->
+      <!-- Step 1 start -->
+      <fieldset class="form-step-active form-step">
+        <!-- HEADINGS -->
+        <div class="heading">
+          <legend class="text-primary-900 fw-bold fs-p-heading">
+            Personal info
+          </legend>
+          <p class="text-neutral-500 fs-s-heading">
+            Please provide your name, email address, and phone number.
+          </p>
+        </div>
 
-    <!-- Step 1 start -->
+        <!-- INPUTS AND LABELS -->
+        <div class="form-info">
+          <div class="input-group">
+            <div class="flex">
+              <label for="name">Name </label>
+              <p class="empty-error-msg">This field is required</p>
+            </div>
 
-    <!-- Step 1 end -->
+            <input
+              type="text"
+              name="user-name"
+              placeholder="e.g.Stephen King"
+              id="name"
+              required />
+          </div>
+          <div class="input-group">
+            <div class="flex">
+              <label for="email">Email Address</label>
+              <p class="empty-error-msg">This field is required</p>
+            </div>
+
+            <input
+              type="email"
+              name="email"
+              placeholder="e.g.StephenKing@lorem.com"
+              id="email"
+              required />
+          </div>
+          <div class="input-group">
+            <div class="flex">
+              <label for="phone">Phone Number</label>
+              <p class="empty-error-msg">This field is required</p>
+            </div>
+
+            <input
+              class="required"
+              type="number"
+              name="phone-number"
+              placeholder="e.g. +1 234 567 890"
+              id="phone"
+              required />
+          </div>
+        </div>
+
+        <!-- BUTTONS BOX -->
+        <div class="btn-box">
+          <button class="btn btn-next ml-auto">Next Step</button>
+        </div>
+        <!-- END OF FORM STEP -1 -->
+      </fieldset>
+      <!-- Step 1 end -->
+    </form>
 
     <!-- Step 2 start -->
 
@@ -50,12 +130,5 @@
     <!-- Step 5 start -->
 
     <!-- Step 5 end -->
-
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
-    </div>
   </body>
 </html>
