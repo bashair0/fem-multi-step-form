@@ -11,10 +11,11 @@
       sizes="32x32"
       href="./assets/images/favicon-32x32.png" />
     <link rel="stylesheet" href="style.css" />
+    <script src="index.js" defer></script>
 
     <title>Frontend Mentor | Multi-step form</title>
   </head>
-  <body>
+  <body class="flex">
     <!-- Sidebar start -->
     <form action="#" method="post" class="form | flex">
       <!-- PROGRESS BAR -->
@@ -113,22 +114,103 @@
         <!-- END OF FORM STEP -1 -->
       </fieldset>
       <!-- Step 1 end -->
+
+      <!-- Step 2 start -->
+      <fieldset class="form-step">
+        <!-- HEADINGS -->
+        <div class="heading">
+          <legend class="text-primary-900 fw-bold fs-p-heading">
+            Select your plan
+          </legend>
+          <p class="text-neutral-500 fs-s-heading">
+            You have the option of monthly or yearly billing.
+          </p>
+        </div>
+
+        <!-- CARDS AND SWITCH -->
+
+        <div class="form-info">
+          <div class="plan-cards monthly-plan | flex">
+            <label for="arcade" class="plan-card plan-selected">
+              <input
+                type="radio"
+                name="Add-ons"
+                value="arcade"
+                aria-valueprice="9"
+                id="arcade"
+                checked />
+              <div class="card-img">
+                <img src="assets/images/icon-arcade.svg" alt="" />
+              </div>
+              <div class="card-info">
+                <h3>Arcade</h3>
+                <p>$9/mo</p>
+                <p class="special-deal | text-primary-900">2 months free</p>
+              </div>
+            </label>
+            <label for="advanced" class="plan-card">
+              <input
+                type="radio"
+                name="Add-ons"
+                value="advanced"
+                aria-valueprice="12"
+                id="advanced" />
+              <div class="card-img">
+                <img src="assets/images/icon-advanced.svg" alt="" />
+              </div>
+              <div class="card-info">
+                <h3>Advanced</h3>
+                <p>$12/mo</p>
+                <p class="special-deal | text-primary-900">2 months free</p>
+              </div>
+            </label>
+            <label for="pro" class="plan-card">
+              <input
+                type="radio"
+                name="Add-ons"
+                value="pro"
+                aria-valueprice="15"
+                id="pro" />
+              <div class="card-img">
+                <img src="assets/images/icon-pro.svg" alt="" />
+              </div>
+              <div class="card-info">
+                <h3>Pro</h3>
+                <p>$15/mo</p>
+                <p class="special-deal | text-primary-900">2 months free</p>
+              </div>
+            </label>
+          </div>
+          <div class="plan-switch | flex">
+            <h3 class="monthly | plan-active">Monthly</h3>
+            <label class="switch">
+              <input type="checkbox" id="plan-switcher" />
+              <span class="slider round"></span>
+            </label>
+            <h3 class="yearly">Yearly</h3>
+          </div>
+        </div>
+
+        <!-- BUTTONS BOX -->
+        <div class="btn-box | flex">
+          <button class="btn btn-prev">Go Back</button>
+          <button class="btn btn-next">Next Step</button>
+        </div>
+      </fieldset>
+
+      <!-- Step 2 end -->
+
+      <!-- Step 3 start -->
+
+      <!-- Step 3 end -->
+
+      <!-- Step 4 start -->
+
+      <!-- Step 4 end -->
+
+      <!-- Step 5 start -->
+
+      <!-- Step 5 end -->
     </form>
-
-    <!-- Step 2 start -->
-
-    <!-- Step 2 end -->
-
-    <!-- Step 3 start -->
-
-    <!-- Step 3 end -->
-
-    <!-- Step 4 start -->
-
-    <!-- Step 4 end -->
-
-    <!-- Step 5 start -->
-
-    <!-- Step 5 end -->
   </body>
 </html>

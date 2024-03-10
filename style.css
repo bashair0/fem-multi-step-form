@@ -115,6 +115,7 @@ body {
   font-size: var(--fs-body);
   color: var(--clr-neutral-500);
   background-color: var(--clr-primary-100);
+  align-items: center;
 }
 
 label {
@@ -181,8 +182,7 @@ label > span {
 
 .form {
   width: 90%;
-  margin-block-start: 6.2rem;
-  margin-inline: auto;
+  /* margin-inline: auto; */
   border: 1px solid var(--clr-neutral-100);
   box-shadow: 0 3px 5px var(--clr-neutral-400);
   border-radius: 1rem;
@@ -297,7 +297,7 @@ label > span {
 .form-step {
   /* height: fit-content; */
   position: relative;
-  margin-block: 1rem 2rem;
+  margin-block-start: 2rem;
 }
 
 @media (min-width: 52em) {
@@ -309,7 +309,13 @@ label > span {
 }
 
 .form-step > :not(:first-child) {
-  margin-top: 3rem;
+  margin-top: 1rem;
+}
+
+@media (min-width: 52em) {
+  .form-step > :not(:first-child) {
+    margin-top: 3rem;
+  }
 }
 
 .form-step {
@@ -318,6 +324,130 @@ label > span {
 
 .form-step-active {
   display: block;
+}
+
+/* CARDS */
+
+.plan-cards {
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+@media (max-width: 52em) {
+  .plan-cards {
+    flex-direction: column;
+  }
+}
+
+.plan-card {
+  display: flex;
+  border: 2px solid var(--clr-neutral-400);
+  gap: 1rem;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+@media (min-width: 52em) {
+  .plan-card {
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30%;
+  }
+}
+
+.plan-card:hover {
+  border: 2px solid var(--clr-primary-500);
+}
+
+.plan-selected {
+  border: 2px solid var(--clr-primary-500);
+  background-color: var(--clr-neutral-200);
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+@media (min-width: 52em) {
+  .card-info {
+    margin-block-start: 2rem;
+  }
+}
+
+.card-info > h3 {
+  color: var(--clr-primary-900);
+  font-weight: var(--fw-semi-bold);
+}
+
+.special-deal {
+  display: none;
+  font-size: var(--fs-300);
+}
+
+/* SWITCH */
+
+.plan-switch {
+  gap: 2rem;
+  margin-block: 1rem;
+  padding: 0.8rem;
+  border-radius: 10px;
+  background-color: var(--clr-neutral-200);
+}
+
+.plan-switch > h3 {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-300);
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 3rem;
+  height: 1.5rem;
+  padding-inline: 0.5rem;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  background-color: var(--clr-primary-900);
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1rem;
+  width: 1rem;
+  left: var(--left, 15px);
+  bottom: 4px;
+  background-color: var(--clr-neutral-100);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.plan-active {
+  color: var(--clr-primary-900);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }
 
 /* BUTTONS */
